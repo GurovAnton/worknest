@@ -1,0 +1,101 @@
+$vivid_blue: #0459fd;
+$soft_red: #ef4e53;
+$very_light_gray: #f2f2f2;
+$white: #ffffff;
+/* screen width*/
+$screen_width_480: 480px;
+$screen_width_768: 768px;
+/* helpers*/
+@mixin screen_width_480 {
+    @media (max-width: #{$screen_width_480}){
+       @content;
+   }
+}
+@mixin screen_width_768 {
+    @media (max-width: #{$screen_width_768}){
+       @content;
+   }
+}
+.veryfication-form {
+    margin-top: 50px;
+}
+.veryfication-form-wrapper {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid $very_light_gray;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    @include screen_width_768 {
+       width: 80%;
+       padding: 10px;
+    }
+    @include screen_width_480 {
+        width: 100%;
+        padding: 5px;
+     }
+}
+.header-wrapper p {
+        text-align: center;
+        font-size: 20px;
+    }
+.buttons-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 30px;
+}
+.button {
+  width: 30%;
+  min-width: 100px;
+  height: 50px;
+  background-color: $vivid_blue;
+  color: $white;
+  text-align: center;
+  padding: 0 10px;
+  line-height: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.modal {
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: $very_light_gray;
+    line-height: 50px;
+    padding-left: 10px;
+    border: 3px solid $soft_red;
+    z-index: 999;
+}
+.modal-close {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+}

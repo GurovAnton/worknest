@@ -1,0 +1,13 @@
+// helpers
+
+
+@mixin screen_width_480 {
+    @media (max-width: #{$screen_width_480}){
+       @content;
+   }
+}
+@mixin screen_width_768 {
+    @media (max-width: #{$screen_width_768}){
+       @content;
+   }
+}
